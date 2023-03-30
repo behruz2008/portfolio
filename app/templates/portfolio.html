@@ -1,0 +1,24 @@
+{% load static %}
+
+<section class="section" id="#portfolio">
+    <div class="container text-center">
+        <h6 class="section-title mb-6">Portfolio</h6>   
+        <div class="row">   
+        {% for a in Portfolio %}
+            <div class="col-md-6 col-lg-3">  
+                <div class="service-card">                                        
+                       <div class="body">   
+                        <img style="width: 180px; height: 180px;" src="{{ a.rasm.url }}" alt="">                                                             
+                        <h6 style="font-size: 15px;" class="title">Loyiha nomi: {{ a.nom }}</h6>
+                        <h6 style="font-size: 10px; color: black;" >Loyiha nomi: {{ a.malumot }}</h6>
+                        <div class="form-group col-sm-12 mt-3">
+                            <input type="submit" value="Ko'rish" class="btn btn-outline-primary rounded"><a href="{{ a.link }}"></a>                
+                        </div>                     
+                    </div>                                                                                                                     
+                </div>                                        
+            </div>    
+            {% endfor %}       
+        </div>    
+    </div>
+</section>
+

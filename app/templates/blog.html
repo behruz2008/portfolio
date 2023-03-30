@@ -1,0 +1,54 @@
+{% load static %}
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Behruz Usmonov</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css'%}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="{% static 'css/meyawo.css'%}">
+</head>
+
+
+
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Shaxsiy blog sahifa</h6>
+            <!-- blog-wrapper -->
+            
+            <div class="blog-card">
+                {% for x in Blog %}             
+                <div class="blog-card-header">
+                    <img src="{{ x.rasm.url }}" class="blog-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                
+                <div class="blog-card-body">               
+                    <h5 class="blog-card-title"><span style="color: black;">Blog mavzusi:</span> {{x.mavzu}}</h6>                
+                    <!-- <p class="blog-card-caption">
+                        <a href="#">By: Admin</a>
+                        <a href="#"><i class="ti-heart text-danger"></i> 234</a>
+                        <a href="#"><i class="ti-comment"></i> 123</a>                  
+                    </p> -->
+                    <p>{{x.malumot}}</p>
+                    <p>vaqt: {{x.sana}}</p>
+
+                   
+                
+                    <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+                {% endfor %}
+            </div>
+                    
+
+
+
+
+
+            <!-- blog-wrapper -->
+           
+        </div><!-- end of container -->
+    </section>
